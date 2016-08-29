@@ -1,0 +1,2 @@
+在配置好了以后，自然是常规的:make 、make install了 
+
