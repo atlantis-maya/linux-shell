@@ -6,17 +6,20 @@
 # print chardet.detect(data)
 # print chardet.detect(f1.read())
 from subprocess import Popen, PIPE
+import os
 #popen=subprocess.Popen
 #pipe=subprocess.PIPE
-log=open("os.log","a+")
-string=""
-p=Popen("ip addr",shell=True,stdout=PIPE)
-out=p.stdout.readlines()
-for ls in out:
-    # print(str(ls, encoding = "utf-8"))
-    string=string +str(ls, encoding = "utf-8")
-#string=str(out)
-log.write(string)
-log.close()
+# log=open("os.log","a+")
+# string=""
+# p=Popen("ip addr",shell=True,stdout=PIPE)
+# out=p.stdout.readlines()
+# for ls in out:
+#     # print(str(ls, encoding = "utf-8"))
+#     string=string +str(ls, encoding = "utf-8")
+# #string=str(out)
+# log.write(string)
+# log.close()
 #print out
 #上面的代码是有问题的估计今天是搞不定了
+result=os.popen("cd ll")
+print(result)
