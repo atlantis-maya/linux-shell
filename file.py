@@ -1,4 +1,4 @@
-# -*- coding:utf-8 -*-
+#!/usr/bin/env python
 import os
 import os.path
 rootdir = "/bin" # 指明被遍历的文件夹
@@ -6,10 +6,10 @@ rootdir = "/bin" # 指明被遍历的文件夹
 for parent,dirnames,filenames in os.walk(rootdir):
 	#输出文件夹信息
 	for dirname in dirnames:
-		print "parent is:" + parent
-		print "dirname is" + dirname
+		print("parent is:%s"%(parent))
+		print("dirname is:%s" %(dirname))
 	#输出文件信息
 	for filename in filenames:
-		print "parent is:" + parent
-		print "filename is:" + filename
-	print "the full name of the file is:" + os.path.join(parent,filename) #输出文件路径信息
+		print("parent is: %s"%(parent))
+		print("filename is:%s"%(filename)) 
+		print("the full name of the file is:" , os.path.join(parent,filename)) #输出文件路径信息
